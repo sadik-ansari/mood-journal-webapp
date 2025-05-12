@@ -25,3 +25,7 @@ dist-ssr
 
 # Ignore environment variables in the backend
 backend/.env
+node_modules/
+dist/
+.env
+

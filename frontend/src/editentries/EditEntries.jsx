@@ -23,12 +23,12 @@ const EditEntry = ({ entry, onClose, onUpdate }) => {
       const response = await axios.put(`${API_BASE_URL}/api/entries/${entry._id}`, formData,
         {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`, // Ensure user is authenticated
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         });
         console.log(response)
-        onUpdate(response.data); // Update UI after successful update
-        onClose(); // Close the modal
+        onUpdate(response.data); 
+        onClose();
     } catch (error) {
       console.error("Error updating entry:", error);
       alert("Failed to update entry");
@@ -73,8 +73,8 @@ const EditEntry = ({ entry, onClose, onUpdate }) => {
         </label>
         
         <div className="popup-actions">
-          <button onClick={handleUpdate}>Update</button>
-          <button onClick={onClose}>Cancel</button>
+          <button onClick={handleUpdate} className="update-btn">Update</button>
+          <button onClick={onClose} className="cancel-btn">Cancel</button>
         </div>
       </div>
     </div>

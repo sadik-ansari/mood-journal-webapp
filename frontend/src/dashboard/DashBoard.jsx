@@ -35,10 +35,6 @@
         };
         fetchEntries();
       },[])
-     
-    // useEffect(() => {
-    //   fetchEntries(); 
-    // }, []);
     
 
     const handleAddEntries = () => {
@@ -91,11 +87,11 @@
       <>
         <div className="list add flex-col">
           <div className="display-none">
-            {/* <Navbar fetchEntries={fetchEntries}/> */}
+        
           </div>
           <div className="list-new-find">
             <div className="list-new-entries">
-              <button type="button" onClick={handleAddEntries}>New Entries</button>
+              <button type="button" className="new-entries-btn" onClick={handleAddEntries}>New Entries</button>
             </div>
             <div className="list-find-entries">
               <select id="moods"
@@ -134,11 +130,11 @@
                   <p>{entry.title}</p>
                   <p>{entry.content}</p>
                   <p className="list-entries-center">{entry.mood}</p>
-                  <button type="button" className="edit" onClick={(e) => {e.stopPropagation();
+                  <button type="button" className="edit-btn" onClick={(e) => {e.stopPropagation();
                     handleEditEntry(entry)}}>
                     <i className="fa-solid fa-pen-to-square"></i>Edit
                   </button>
-                  <button type="button" className="delete" onClick={(e) => {e.stopPropagation();
+                  <button type="button" className="delete-btn" onClick={(e) => {e.stopPropagation();
                     handleDelete(entry)}}>
                     <i className="fa-solid fa-trash-can"></i>Delete
                   </button>

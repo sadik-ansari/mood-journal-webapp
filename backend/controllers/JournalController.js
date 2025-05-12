@@ -1,6 +1,5 @@
 const { message } = require('prompt');
 const JournalEntry = require('../models/JournalEntries');
-// const axios = require('axios')
 
 const createJournalEntry = async (req,res) => {
     const {title, mood, content} = req.body;
@@ -20,7 +19,6 @@ const createJournalEntry = async (req,res) => {
 const getJournalEntry = async (req,res) => {
     try {
         const entries = await JournalEntry.find({userId: req.user.id});
-        // console.log("Fetched entries:", entries);
         res.json(entries)
     } catch (error) {
         console.error("Error fetching entries:", error.message);

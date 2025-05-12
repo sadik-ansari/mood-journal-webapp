@@ -10,16 +10,15 @@ const Navbar = ({signUpBtn, fetchEntries}) => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
-      setIsAuthenticated(true); // User is logged in
+      setIsAuthenticated(true);
     }
   }, []);
 
   const onCloseHandler = useCallback(() => setShowAuth(false), []);
 
   const handleLogout = () => {
-    localStorage.removeItem("token"); // Remove token
-    setIsAuthenticated(false); // Update state
-    // fetchEntries()
+    localStorage.removeItem("token"); 
+    setIsAuthenticated(false);
     alert("You have been logged out.");
   };
 

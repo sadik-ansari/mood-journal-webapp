@@ -2,7 +2,6 @@
     margin-top: 50px;
 }
 
-/* Adjusting layout for the top section */
 .list-new-find {
     display: flex;
     justify-content: space-between;
@@ -12,7 +11,19 @@
     gap: 10px; 
 }
 
-.list-new-find .list-new-entries button {
+.list-new-find .list-new-entries .new-entries-btn {
+    background-color: rgb(146, 120, 249);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+}
+
+.list-new-find .list-new-entries .edit {
     background-color: rgb(146, 120, 249);
     border: none;
     border-radius: 8px;
@@ -32,7 +43,6 @@
     border-radius: 6px;
 }
 
-/* Adjusting entries table layout */
 .list-entries {
     display: grid;
     grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
@@ -44,9 +54,11 @@
     margin-top: 10px;
     cursor: pointer;
 }
+
 .list-entries-center {
     text-align: center;
 }
+
 .list-entries p{
     color: #101010;
 }
@@ -78,7 +90,6 @@
     margin-right: 10px;
 }
 
-/* Header row format */
 .list-table-formate {
     display: grid;
     grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
@@ -125,6 +136,7 @@
         width: 200px; /* Full-width dropdown */
     }
 }
+
 @media (max-width: 768px) {
     .list-new-find {
         flex-direction: column; /* Stack buttons and select dropdown */
@@ -151,7 +163,7 @@
     }
 
     .list-new-find .list-find-entries #moods {
-        width: 140px; /* Full-width dropdown */
+        width: 140px; 
     }
 }
 
@@ -174,19 +186,19 @@
     }
 
     .list-new-find .list-find-entries #moods {
-        width: 100%; /* Full-width dropdown */
+        width: 100%; 
     }
 }
 
 /* Small screens (mobile phones) */
 @media (max-width: 480px) {
     .list-new-find {
-        flex-direction: column; /* Stack everything vertically */
-        gap: 15px; /* Add spacing */
+        flex-direction: column;
+        gap: 15px; 
     }
 
     .list-entries {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr;
         text-align: center;
         padding: 15px;
     }
@@ -196,40 +208,40 @@
     }
 
     .list-entries button {
-        font-size: 14px; /* Reduce button font size */
+        font-size: 14px; 
     }
 
     .list-table-formate {
-        display: none; /* Hide table headers on small screens */
+        display: none;
     }
 }
 
 @media (max-width: 380px) {
     .list {
-        margin-top: 20px; /* Adjust top margin for smaller screens */
+        margin-top: 20px; 
     }
 
     .list-new-find {
-        gap: 10px; /* Reduce spacing between items */
+        gap: 10px;
     }
 
     .list-new-find .list-new-entries button,
     .list-new-find .list-find-entries #moods {
-        padding: 10px 15px; /* Adjust padding for smaller buttons */
-        font-size: 14px; /* Smaller font size for buttons and dropdown */
+        padding: 10px 15px; 
+        font-size: 14px; 
     }
 
     .list-entries {
-        padding: 8px 10px; /* Reduce padding */
-        gap: 5px; /* Less gap between items */
+        padding: 8px 10px; 
+        gap: 5px; 
     }
 
     .list-entries p {
-        font-size: 12px; /* Smaller font size for text */
+        font-size: 12px; 
     }
 
     .list-entries button {
-        font-size: 12px; /* Smaller font size for buttons */
-        padding: 8px; /* Adjust padding for smaller buttons */
+        font-size: 12px;
+        padding: 8px;
     }
 }

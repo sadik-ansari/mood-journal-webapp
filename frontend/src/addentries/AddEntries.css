@@ -1,4 +1,3 @@
-   /* Modal Background */
    .modal {
     position: fixed;
     top: 0;
@@ -11,8 +10,7 @@
     align-items: center;
     z-index: 1000;
   }
-  
-  /* Modal Content */
+
   .modal-content {
     background-color: #fff;
     padding: 20px;
@@ -31,8 +29,7 @@
   .modal-content h2{
     color: black;
   }
-  
-  /* Input and Select Styling */
+
   .modal-content input,
   .modal-content select,
   .modal-content textarea {
@@ -48,7 +45,6 @@
     resize: none;
   }
   
-  /* Add Button */
   .modal-content .add-btn {
     width: 20%;
     padding: 12px;
@@ -65,7 +61,6 @@
     background-color: #218838;
   }
   
-  /* Close Button */
   .modal-content .close-btn {
     position: absolute;
     top: 10px;

@@ -36,28 +36,26 @@ const AuthModal = ({ onClose, fetchEntries }) => {
       const data = response.data;
 
       if (response.data.token) {
-          localStorage.setItem("token", data.token); // Save token in browser
+          localStorage.setItem("token", data.token);
           setIsAuthenticated(true);
           alert("Login successful!");
-          // setSignUpBtn(false)
-          // {signUpBtn && <Navbar signUpBtn={signUpBtn}/>}
-          onClose(); // Close modal after login
-          // await fetchEntries();
+          onClose(); 
+       
       } else {
-          alert(data.message); // Show error message from backend
+          alert(data.message);
       }
 
     } catch (error) {
       console.error("Login error:", error);
       alert("Failed to login. Try again!");
     } finally {
-      setLoading(false); // ✅ Reset loading state
+      setLoading(false); 
     }
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("token"); // Remove token from localStorage
-    setIsAuthenticated(false); // Update auth state to logged out
+    localStorage.removeItem("token");
+    setIsAuthenticated(false); 
   };
 
   return (
@@ -83,9 +81,7 @@ const AuthModal = ({ onClose, fetchEntries }) => {
         </div>
         <div className="auth-form">
           <h2>{isLogin ? "Login" : "Sign Up"}</h2>
-          {/* Wrap inputs inside form */}
           <form onSubmit={handleSubmit}>
-            {/* Add username input field, only visible during signup */}
             {!isLogin && (
               <input
                 type="text"
@@ -93,7 +89,7 @@ const AuthModal = ({ onClose, fetchEntries }) => {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 required
-                autoComplete="username" // Add autocomplete attribute for username
+                autoComplete="username"
               />
             )}
             <input
@@ -102,7 +98,7 @@ const AuthModal = ({ onClose, fetchEntries }) => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              autoComplete="email" // Add autocomplete attribute for email
+              autoComplete="email"
             />
             <input
               type="password"
@@ -110,7 +106,7 @@ const AuthModal = ({ onClose, fetchEntries }) => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              autoComplete="current-password" // Add autocomplete attribute for password
+              autoComplete="current-password"
             />
             <button className="auth-btn" type="submit">
               {isLogin ? (loading ? "Logging in..." : "Login") : "Sign Up"}

@@ -2,7 +2,7 @@ import React from "react";
 import "./ShowEntries.css";
 
 const ShowEntries = ({ entry, onClose }) => {
-  if (!entry) return null; // Return null if entry is undefined
+  if (!entry) return null; 
 
   return (
     <div className="entry-popup">

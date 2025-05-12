@@ -1,0 +1,92 @@
+/* Modal Background */
+.auth-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .auth-model-form{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Close Button */
+  .auth-modal-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 2px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Tabs for Login/Signup */
+  .auth-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .auth-tabs button {
+    flex: 1;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .auth-tabs .active-tab {
+    border-bottom: 2px solid #007bff;
+    background-color: #fff;
+  }
+  
+  .auth-form input {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #cacaca;
+    font-size: 16px;
+  }
+  
+  .auth-form h2{
+    color: black;
+  }
+  .auth-form .auth-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .auth-form .auth-btn:hover {
+    background-color: #0056b3;
+  }
+  

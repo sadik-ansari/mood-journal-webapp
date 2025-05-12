@@ -1,0 +1,235 @@
+.list {
+    margin-top: 50px;
+}
+
+/* Adjusting layout for the top section */
+.list-new-find {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+
+.list-new-find .list-new-entries button {
+    background-color: rgb(146, 120, 249);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+}
+
+.list-new-find .list-find-entries #moods {
+    width: 200px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+/* Adjusting entries table layout */
+.list-entries {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+    align-items: center;
+    border: 1px solid rgb(109, 109, 109);
+    border-radius: 8px;
+    padding: 6px 10px;
+    height: 60px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.list-entries-center {
+    text-align: center;
+}
+.list-entries p{
+    color: #101010;
+}
+
+.list-entries :nth-child(2) {
+    color: #101010;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    display: block; 
+    max-width: 650px;
+}
+
+.list-entries button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 10px;
+    border: 1px solid black;
+    border-radius: 6px;
+    width: 100px;
+    margin: auto;
+    color: #000000;
+}
+
+.list-entries i {
+    margin-right: 10px;
+}
+
+/* Header row format */
+.list-table-formate {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+    align-items: center;
+    padding: 12px 15px;
+    border: 1px solid #cacaca;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.title :nth-child(3), .title :nth-child(4),  .title :nth-child(5){
+    
+    text-align: center;
+}
+
+
+.list-table-formate.title {
+   background-color: #f9f9f9;
+   color: black;
+}
+
+/* Responsive Styles */
+
+/* Medium screens (tablets) */
+@media (max-width: 999px){
+
+    .list-entries {
+        grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+        font-size: 14px; /* Reduce font size */
+    }
+    .list-entries button{
+        font-size: 14px;
+        padding: 6px 6px;
+        border: 1px solid black;
+        border-radius: 4px;
+        width: 80px;
+    }
+    .list-table-formate {
+        grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+        font-size: 12px;
+    }
+
+    .list-new-find .list-find-entries #moods {
+        width: 200px; /* Full-width dropdown */
+    }
+}
+@media (max-width: 768px) {
+    .list-new-find {
+        flex-direction: column; /* Stack buttons and select dropdown */
+        align-items: center;
+    }
+
+    .list-entries {
+        grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+        font-size: 14px; /* Reduce font size */
+    }
+    .list-entries button{
+        font-size: 14px;
+        padding: 8px 8px;
+        border: 1px solid black;
+        border-radius: 4px;
+        width: 60px;
+    }
+    .list-entries i{
+        display: none;
+    }
+    .list-table-formate {
+        grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+        font-size: 12px;
+    }
+
+    .list-new-find .list-find-entries #moods {
+        width: 140px; /* Full-width dropdown */
+    }
+}
+
+@media (max-width: 648px){
+
+    .list-entries {
+        grid-template-columns: 0.5fr 2fr 0.5fr ;
+        font-size: 14px; /* Reduce font size */
+    }
+    .title :nth-child(4),  .title :nth-child(5){
+        display: none;
+        
+    }
+    .list-entries button{
+        display: none;
+    }
+    .list-table-formate {
+        grid-template-columns: 0.5fr 2fr 0.5fr;
+        font-size: 12px;
+    }
+
+    .list-new-find .list-find-entries #moods {
+        width: 100%; /* Full-width dropdown */
+    }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 480px) {
+    .list-new-find {
+        flex-direction: column; /* Stack everything vertically */
+        gap: 15px; /* Add spacing */
+    }
+
+    .list-entries {
+        grid-template-columns: 1fr; /* Single column layout */
+        text-align: center;
+        padding: 15px;
+    }
+
+    .list-entries button{
+        font-size: 14px;
+    }
+
+    .list-entries button {
+        font-size: 14px; /* Reduce button font size */
+    }
+
+    .list-table-formate {
+        display: none; /* Hide table headers on small screens */
+    }
+}
+
+@media (max-width: 380px) {
+    .list {
+        margin-top: 20px; /* Adjust top margin for smaller screens */
+    }
+
+    .list-new-find {
+        gap: 10px; /* Reduce spacing between items */
+    }
+
+    .list-new-find .list-new-entries button,
+    .list-new-find .list-find-entries #moods {
+        padding: 10px 15px; /* Adjust padding for smaller buttons */
+        font-size: 14px; /* Smaller font size for buttons and dropdown */
+    }
+
+    .list-entries {
+        padding: 8px 10px; /* Reduce padding */
+        gap: 5px; /* Less gap between items */
+    }
+
+    .list-entries p {
+        font-size: 12px; /* Smaller font size for text */
+    }
+
+    .list-entries button {
+        font-size: 12px; /* Smaller font size for buttons */
+        padding: 8px; /* Adjust padding for smaller buttons */
+    }
+}

@@ -1,0 +1,57 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 20px; /* Add some padding for spacing */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.navbar-left p, .navbar-middle p {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar .navbar-right button {
+    font-size: 18px;
+    padding: 8px 18px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .navbar-left p, .navbar-middle p {
+        font-size: 20px; /* Adjust font size for smaller screens */
+        margin: 5px 0; /* Add some spacing between items */
+    }
+
+    .navbar .navbar-right button {
+        font-size: 16px; /* Adjust button size for smaller screens */
+        padding: 6px 12px;
+    }
+}
+
+.display-none{
+    
+}
+
+/* Media query for very small screens */
+@media (max-width: 480px) {
+    .navbar-left p, .navbar-middle p {
+        font-size: 18px; /* Further adjust font size */
+    }
+
+    .navbar .navbar-right button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}

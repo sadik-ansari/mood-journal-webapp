@@ -1,4 +1,3 @@
-const { message } = require('prompt');
 const JournalEntry = require('../models/JournalEntries');
 
 const createJournalEntry = async (req,res) => {

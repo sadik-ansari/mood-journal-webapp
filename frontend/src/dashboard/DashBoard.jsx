@@ -15,7 +15,7 @@
     const [selectMood, setSelectMood] = useState("all");
     const [showEditPop, setShowEditPop] = useState(false);
 
-    const API_BASE_URL = import.meta.env  .REACT_APP_API_BASE_URL || "http://localhost:5000";
+    const API_BASE_URL = import.meta.env  .REACT_APP_API_BASE_URL || "https://mood-journal-webapp-backend.onrender.com";
 
    
       useEffect(() => {

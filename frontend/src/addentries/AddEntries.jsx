@@ -18,7 +18,7 @@ const AddEntries = ({onClose,onAddedEntry}) => {
     onClose()
     if(formData.title || formData.content){
       try {
-        const response = await axios.post("http://localhost:5000/api/entries", // Updated URL with /api
+        const response = await axios.post("https://mood-journal-webapp-backend.onrender.com/api/entries", // Updated URL with /api
           formData,
           {
             headers: {

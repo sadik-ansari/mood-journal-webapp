@@ -25,7 +25,7 @@ const AuthModal = ({ onClose, fetchEntries }) => {
     const endpoint = isLogin ? "login" : "register";
     console.log("is login is:",endpoint)
     try {
-      const response = await axios.post(`http://localhost:5000/api/${endpoint}`,{
+      const response = await axios.post(`https://mood-journal-webapp-backend.onrender.com/api/${endpoint}`,{
         email,
         password,
         ...(isLogin ? {} : { username })

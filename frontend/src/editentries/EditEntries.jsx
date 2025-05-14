@@ -15,7 +15,7 @@ const EditEntry = ({ entry, onClose, onUpdate }) => {
   };
 
   const handleUpdate = async () => {
-    const API_BASE_URL = import.meta.env  .REACT_APP_API_BASE_URL || "http://localhost:5000";
+    const API_BASE_URL = import.meta.env  .REACT_APP_API_BASE_URL || "https://mood-journal-webapp-backend.onrender.com";
     console.log("Entry type:", typeof entry);
     console.log("Entry object:", entry);
     console.log("entry id is: ",entry.userId)

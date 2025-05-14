@@ -18,7 +18,8 @@ const AddEntries = ({onClose,onAddedEntry}) => {
     onClose()
     if(formData.title || formData.content){
       try {
-        const response = await axios.post("https://mood-journal-webapp-backend.onrender.com/api/entries", // Updated URL with /api
+        const response = await axios.post("https://mood-journal-webapp-backend.onrender.com/api/entries", 
+        // Updated URL with /api
           formData,
           {
             headers: {
@@ -48,9 +49,12 @@ const AddEntries = ({onClose,onAddedEntry}) => {
           onChange={handleChange}
         />
         <select name="mood" value={formData.mood} onChange={handleChange}>
-          <option value="happy">happy</option>
-          <option value="neutral">neutral</option>
-          <option value="sad">sad</option>
+          <option value="Normal">Normal</option>
+          <option value="Happy">Happy</option>
+          <option value="Exhausted">Exhausted</option>
+          <option value="Inspired">Inspired</option>
+          <option value="Calm">Calm</option>
+          <option value="Annoyed">Annoyed</option>
         </select>
         <textarea
           name="content"

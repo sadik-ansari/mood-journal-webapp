@@ -41,6 +41,8 @@
     padding: 0px 10px;
     font-size: 16px;
     border-radius: 6px;
+    background-color: white;
+    color: black;
 }
 
 .list-entries {

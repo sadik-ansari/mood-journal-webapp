@@ -60,22 +60,23 @@
     background-color: #fff;
   }
   
-  .auth-form input {
-    width: 95%;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #cacaca;
-    font-size: 16px;
-    background-color: white;
-    color: black;
-  }
+ .auth-form input {
+  width: 95%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #cacaca;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+}
 
-  input::placeholder{
-  color: gray;       
-  font-style: italic;   
-  opacity: 1;      
-  }
+.auth-form input::placeholder {
+  color: gray;
+  font-style: italic;
+  opacity: 1;
+}
+
   
   .auth-form h2{
     color: black;

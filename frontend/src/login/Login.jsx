@@ -4,13 +4,13 @@ import "./Login.css";
 import Navbar from "../navbar/NavBar";
 
 const AuthModal = ({ onClose, fetchEntries }) => {
-  const [isLogin, setIsLogin] = useState(true); // Toggle between Login and Signup
+  const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState("");
   const [signUpBtn,setSignUpBtn] = useState(true);
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState(""); // State for username
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // Track authentication state
-  const [loading, setLoading] = useState(false); // ✅ Prevent multiple calls
+  const [username, setUsername] = useState(""); 
+  const [isAuthenticated, setIsAuthenticated] = useState(false); 
+  const [loading, setLoading] = useState(false); 
 
   const handleSwitch = () => {
     setIsLogin(!isLogin);
@@ -18,8 +18,8 @@ const AuthModal = ({ onClose, fetchEntries }) => {
 
   const handleSubmit = async (e) => {
 
-    if (loading) return; // ✅ Prevent double request
-    setLoading(true); // ✅ Set loading state
+    if (loading) return;
+    setLoading(true); 
 
     e.preventDefault();
     const endpoint = isLogin ? "login" : "register";

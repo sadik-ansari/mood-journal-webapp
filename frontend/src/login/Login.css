@@ -48,6 +48,7 @@
     font-size: 16px;
     font-weight: bold;
     border: none;
+    color: black;
     background-color: #f0f0f0;
     cursor: pointer;
     border-bottom: 2px solid transparent;
@@ -55,16 +56,24 @@
   
   .auth-tabs .active-tab {
     border-bottom: 2px solid #007bff;
+    color: black;
     background-color: #fff;
   }
   
   .auth-form input {
-    width: 90%;
+    width: 95%;
     margin: 10px 0;
     padding: 10px;
     border-radius: 6px;
     border: 1px solid #cacaca;
     font-size: 16px;
+    background-color: white;
+  }
+
+  input::placeholder{
+  color: gray;          /* Change to any color you like */
+  font-style: italic;   /* Optional styling */
+  opacity: 1;           /* Optional: make it fully visible */
   }
   
   .auth-form h2{
@@ -80,6 +89,7 @@
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
+    margin-top: 30px;
   }
   
   .auth-form .auth-btn:hover {

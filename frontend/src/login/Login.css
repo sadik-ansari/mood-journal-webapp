@@ -68,12 +68,13 @@
     border: 1px solid #cacaca;
     font-size: 16px;
     background-color: white;
+    color: black;
   }
 
   input::placeholder{
-  color: gray;          /* Change to any color you like */
-  font-style: italic;   /* Optional styling */
-  opacity: 1;           /* Optional: make it fully visible */
+  color: gray;       
+  font-style: italic;   
+  opacity: 1;      
   }
   
   .auth-form h2{
